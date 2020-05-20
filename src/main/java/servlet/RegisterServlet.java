@@ -55,21 +55,6 @@ public class RegisterServlet extends HttpServlet {
         request.getSession().setAttribute("employee", new EmployeeDaoImpl().findEmployeeByName(employeeName));
         response.sendRedirect("registerSuccess.jsp");
 
-
-/*if(employee!=null){
-			dao.addEmployee(employee);
-			request.getSession().setAttribute("employee", new EmployeeDaoImpl().findEmployeeByName(employeeName));
-			request.getRequestDispatcher("registerSuccess.jsp").forward(request,response);//插入成功后跳转
-		}else{
-
-
-			request.setAttribute("register_error","注册信息不能为空");
-			response.sendRedirect("register.jsp");
-
-		}*/
-
-
-
 	}
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {

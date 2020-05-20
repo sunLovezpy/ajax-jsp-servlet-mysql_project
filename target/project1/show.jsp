@@ -20,9 +20,7 @@
 			$(location).attr('href', 'index.jsp');
 		});
 		$("#btn3").click(function() {
-			$(location).attr('href', 'FindAllServlet' +
-					'' +
-					'');
+			$(location).attr('href', 'FindAllServlet');
 		});
 	});
 </script>
@@ -87,7 +85,7 @@
 	</div>
 	<br/>
 	<div id="buttons">
-		<button id="btn3" class="btn btn-warning">修改用户信息</button>&nbsp;&nbsp;
+		<button id="btn3" class="btn btn-warning">查询所有用户信息</button>&nbsp;&nbsp;
 	    <button id="btn0" class="btn btn-warning">修改用户信息</button>&nbsp;&nbsp;
 		<a class="btn btn-warning" href="PublishReplyServlet?employeeId=${employee.employeeId }" id="btn1" onblur="deleteUser()">删除用户</a>
 		<button id="btn2" class="btn btn-primary">返回</button>

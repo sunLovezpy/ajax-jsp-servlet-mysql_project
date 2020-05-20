@@ -10,7 +10,7 @@
 </head>
 <body>
 
-   <h1 align="center">恭喜你 ${employee.employeeName }!修改成功成功，<a href="updateMessage.jsp">5秒后自动跳转到登录页面，如果没有跳转，请点击这里</a></h1>
+   <h1 align="center">恭喜你 ${employee.employeeName }!修改成功成功，<a href="updateMessage.jsp">5秒后自动跳转到修改之后页面，如果没有跳转，请点击这里</a></h1>
 
 </body>
 </html>

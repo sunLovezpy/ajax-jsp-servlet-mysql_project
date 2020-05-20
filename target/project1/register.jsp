@@ -23,8 +23,45 @@
 			align:center;
 		}
 	</style>
+	<script>
+		$(function () {
+			$("#employeeName").blur(function () {
+				var employeeName = $(this).val();
+				$.post("RegisterJudgeServlet",{employeeName:employeeName},function (date) {
+					var span =$("#userName");
+					if(date.userExit){
+						span.css("color","red");
+						span.html(date.msg)
+						alert("请想一个符合你的名字")
+					}else{
+						span.css("color","green");
+						span.html(date.msg);
+					}
+				},"json");
+			});
+			$("#employeeConfirmPassword").blur(function () {
+                   if($("#employeePassword").val()==$("#employeeConfirmPassword").val()){
+					   return true;
+				   }else{
+					   alert('两次密码不一致')
+				   }
+			});
+			$("#employeePhone").blur(function () {
+				var age = $("#employeePhone").val();
+				var regNum = /^[0-9]{1,2}$/;
+				if (regNum.test(age)) {
+					return true;
+				}
+				else {
+					alert("请输入0-99两位数字！年龄输入不合法，请重新输入")
+					return false;
+				}
+			});
+		});
+	</script>
+
 </head>
-<script type="text/javascript">
+<%--<<script type="text/javascript">
 	//自定义通过ID获取元素的函数
 	function $(id){
 		return document.getElementById(id)
@@ -51,17 +88,17 @@
 			return false;
 		}
 	}
-
-</script>
+</script>--%>
 <body>
 <div id="register" >
 <form class="form-horizontal" method="post" action="RegisterServlet" >
 	<div class="form-group">
 		<label for="employeeName" class="col-sm-2 control-label">姓名:</label>
 		<div class="col-sm-4">
-			<input type="input" class="form-control" id="employeeName"
+			<input type="text" class="form-control" id="employeeName"
 				   placeholder="username" name="employeeName">
 		</div>
+        <span id="userName"></span>
 		<font id="error" size="4"><%=request.getAttribute("register_error") == null ? "" : request.getAttribute("register_error") %></font>
 	</div>
 	<div class="form-group">
@@ -75,7 +112,7 @@
 		<label for="employeeConfirmPassword" class="col-sm-2 control-label">确认密码:</label>
 		<div class="col-sm-4">
 			<input type="input" class="form-control" id="employeeConfirmPassword"
-				   placeholder="password" name="employeeConfirmPassword" onblur="check()">
+				   placeholder="password" name="employeeConfirmPassword">
 		</div>
 	</div>
 
@@ -91,7 +128,7 @@
 	<div class="form-group">
 		<label for="employeePhone" class="col-sm-2 control-label">年龄:</label>
 		<div class="col-sm-4">
-			<input type="input" class="form-control" id="employeePhone" name="employeePhone" onblur="ValidateUserAge()">
+			<input type="input" class="form-control" id="employeePhone" name="employeePhone">
 		</div>
 	</div>
 	<div class="form-group">

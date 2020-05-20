@@ -17,12 +17,10 @@
 			$(location).attr('href', 'PublishReplyServlet');
 		});
 		$("#btn2").click(function() {
-			$(location).attr('href', 'show.jsp');
+			$(location).attr('href', 'index.jsp');
 		});
 		$("#btn3").click(function() {
-			$(location).attr('href', 'FindAllServlet' +
-					'' +
-					'');
+			$(location).attr('href', 'FindAllServlet');
 		});
 	});
 </script>

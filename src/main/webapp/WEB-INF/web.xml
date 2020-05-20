@@ -11,6 +11,12 @@
 		<servlet-class>servlet.RegisterServlet</servlet-class>
 	</servlet>
 	<servlet>
+		<servlet-name>RegisterJudgeServlet</servlet-name>
+		<display-name>RegisterJudgeServlet</display-name>
+		<description></description>
+		<servlet-class>servlet.RegisterJudgeServlet</servlet-class>
+	</servlet>
+	<servlet>
 		<servlet-name>LoginServlet</servlet-name>
 		<display-name>LoginServlet</display-name>
 		<description></description>
@@ -42,11 +48,17 @@
 	</servlet>
     <servlet>
         <servlet-name>FindAllServlet</servlet-name>
+		<display-name>FindAllServlet</display-name>
+		<description></description>
         <servlet-class>servlet.FindAllServlet</servlet-class>
     </servlet>
 	<servlet-mapping>
 		<servlet-name>FindAllServlet</servlet-name>
 		<url-pattern>/FindAllServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>RegisterJudgeServlet</servlet-name>
+		<url-pattern>/RegisterJudgeServlet</url-pattern>
 	</servlet-mapping>
     <servlet-mapping>
 		<servlet-name>RegisterServlet</servlet-name>
