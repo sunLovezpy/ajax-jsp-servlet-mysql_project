@@ -17,7 +17,7 @@ public class PublishMessageServlet extends HttpServlet {
 			throws ServletException, IOException {
 		request.setCharacterEncoding("utf-8");
 		response.setCharacterEncoding("utf-8");
-		int employeeId = Integer.parseInt(request.getParameter("employeeId"));
+		int employeeId = Integer.parseInt(request.getParameter("employeeId").trim());
 		String employeeName = request.getParameter("employeeName");
 		Employee employee=new Employee();
 		employee.setEmployeeId(employeeId);

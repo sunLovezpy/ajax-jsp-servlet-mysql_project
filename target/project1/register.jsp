@@ -32,7 +32,7 @@
 					if(date.userExit){
 						span.css("color","red");
 						span.html(date.msg)
-						alert("请想一个符合你的名字")
+						alert("请想一个符合你的名字");
 					}else{
 						span.css("color","green");
 						span.html(date.msg);
@@ -61,34 +61,6 @@
 	</script>
 
 </head>
-<%--<<script type="text/javascript">
-	//自定义通过ID获取元素的函数
-	function $(id){
-		return document.getElementById(id)
-	}
-
-	function check(){
-		var boo=$('employeePassword').value==$('employeeConfirmPassword').value;
-		if (boo) {
-			return true;
-		}else{
-			alert('两次密码不一致')
-		}
-
-	}
-	function ValidateUserAge()
-	{
-		var age = $('employeePhone').value;
-		var regNum = /^[0-9]{1,2}$/;
-		if (regNum.test(age)) {
-			return true;
-		}
-		else {
-			alert("请输入0-99两位数字！年龄输入不合法，请重新输入")
-			return false;
-		}
-	}
-</script>--%>
 <body>
 <div id="register" >
 <form class="form-horizontal" method="post" action="RegisterServlet" >

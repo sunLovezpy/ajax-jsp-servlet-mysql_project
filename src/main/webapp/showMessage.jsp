@@ -117,8 +117,7 @@
                         <td>Id:${employee.employeeId }</td>
                         <td><div class="form-group">
                             <div class="col-sm-8">
-                                <input type="input" class="form-control" id="employeeId"
-                                       placeholder="employeeId" name="employeeId">
+                                <input type="hidden" class="form-control" name="employeeId" value="${employee.employeeId}">
                             </div>
                             </div>
                         </td>
@@ -128,7 +127,7 @@
                         <td><div class="form-group">
                             <div class="col-sm-8">
                                 <input type="input" class="form-control" id="employeeName"
-                                       placeholder="employeeName" name="employeeName">
+                                       placeholder="姓名" name="employeeName">
                             </div>
                         </div>
                         </td>
@@ -149,7 +148,7 @@
                         <td>出生日期:${employee.employeeBirth }</td>
                         <td><div class="form-group">
                             <div class="col-sm-8">
-                                <input type="date" class="form-control" id="employeeBirth" name="employeeBirth">
+                                <input type="date" class="form-control" id="employeeBirth" name="employeeBirth" placeholder="出生日期">
                             </div>
                         </div>
                         </td>
@@ -159,7 +158,7 @@
                         <td><div class="form-group">
                             <div class="col-sm-8">
                                 <input type="input" class="form-control" id="employeePhone"
-                                       placeholder="employeePhone" name="employeePhone">
+                                       placeholder="年龄" name="employeePhone">
                             </div>
                         </div>
                         </td>
@@ -169,7 +168,7 @@
                         <td><div class="form-group">
                             <div class="col-sm-8">
                                 <input type="input" class="form-control" id="employeePlace"
-                                       placeholder="employeePlace" name="employeePlace">
+                                       placeholder="地址" name="employeePlace">
                             </div>
                         </div>
                         </td>
@@ -178,7 +177,7 @@
                         <td>注册时间:${employee.joinTime }</td>
                         <td><div class="form-group">
                             <div class="col-sm-8">
-                                <input type="date" class="form-control" id="joinTime" name="joinTime">
+                                <input type="date" class="form-control" id="joinTime" name="joinTime" placeholder="注册时间">
                             </div>
                         </div>
                         </td>
